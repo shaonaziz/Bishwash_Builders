@@ -1,0 +1,35 @@
+.bgColor {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #008C45;
+ 
+}
+
+.o1{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  
+}
+
+.imageM1{
+  position: relative;
+  right: 42px;
+}
+
+imageM2{
+  position: relative;
+  right: 60px;
+}
+
+@media (max-width:1199px){
+  .imageM1{
+    position: relative;
+    left: 88px;
+  }
+}
+
+.TextM1{
+  position: relative;
+  right: 42px;
+}

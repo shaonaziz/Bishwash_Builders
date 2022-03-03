@@ -1,96 +1,91 @@
 import React from "react";
-import { Container } from "./Container.styled";
-import { Flex } from "./Flex.styled";
-import { StyledFooter, TagLineTexts, DesignedBy } from "./Footer.styled";
-import SocialIcons from "./SocialIcons";
+import { FooterContainer, SocialIcons } from "./Footer.styled";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import facebook from './fb.png';
+import linkedIn from './linkedin.png';
+import skype from './skype.png';
+import instagram from './insta.png'
+import { Container, Row, Col } from "react-bootstrap";
+import "./style.css";
 const Footer = () => {
   return (
-    <>
-      <StyledFooter>
-        <Container>
-          <Flex>
-            <ul>
-              <TagLineTexts>
-                <h4 className="topper">© 2021 Builders Limited.
-                  <br /> <br /> All Rights Reserved.
-                </h4>
-               
-              </TagLineTexts>
-            </ul>
+    <FooterContainer>
+      <MDBFooter color="blue" className="font-small pt-4 mt-4 footer-area">
+        <MDBContainer fluid className="text-center text-md-left">
+          <Container>
+            <Row>
+              <MDBRow style={{ paddingTop: "80px" }}>
+                <MDBCol md="3" style={{ textAlign: "left"  }}>
+                  <img src="./assets/logo.png" alt="" />
+                  <SocialIcons>
+                    <img src={facebook} alt="" />
+                    <img src={linkedIn} alt="" />
+                    <img src={skype} alt="" />
+                    <img src={instagram} alt="" />
+                  </SocialIcons>
+                </MDBCol>
 
-            <ul>
-              <h5>CORPORATE OFFICE</h5>
-              <li>
-                New Market City Complex,
-                <br /> 44/1 Rahim Square,
-                <br /> New Market, Dhaka-1205
-              </li>
+                <MDBCol md="3">
+                  <ul style={{ textAlign: "left" }}>
+                    <li className="title" style={{ paddingBottom: "20px" }}>
+                      Menu{" "}
+                    </li>
+                    <li className="list-unstyled" style={{}}>
+                      Home
+                    </li>
+                    <li className="list-unstyled">About Us</li>
+                    <li className="list-unstyled">Products</li>
+                    <li className="list-unstyled">Key Informations</li>
+                  </ul>
+                </MDBCol>
+                <MDBCol md="3">
+                  <ul
+                    style={{
+                      textAlign: "left",
+                    }}
+                  >
+                    <li className="title" style={{ paddingBottom: "20px" }}>
+                      Important Links
+                    </li>
+                    <li className="list-unstyled" style={{}}>
+                      Clients
+                    </li>
+                    <li className="list-unstyled">Sister Concerns</li>
+                    <li className="list-unstyled">Career</li>
+                    <li className="list-unstyled">News & Events</li>
+                    <li className="list-unstyled">Contact Us</li>
+                  </ul>
+                </MDBCol>
+                <MDBCol md="3">
+                  <ul style={{ textAlign: "left" }}>
+                    <li className="title" style={{ paddingBottom: "20px" }}>
+                      Other Links
+                    </li>
+                    <li className="list-unstyled" style={{}}>
+                      Terms & Conditions
+                    </li>
+                    <li className="list-unstyled">Privacy Policy</li>
+                  </ul>
+                </MDBCol>
+              </MDBRow>
+            </Row>
+          </Container>
+        </MDBContainer>
 
-              <h5>CONTACT</h5>
-              <p>9665907</p>
-              <p>9665907</p>
-              <p>9665907</p>
-
-              <p>info@bblbd.com</p>
-            </ul>
-            <ul>
-              <h5>ABOUT US</h5>
-              <li>
-                Management Team
-                <br /> 44/1 Rahim Square,
-                <br />
-                Operational Team <br /> 
-              </li>
-
-              <h5>PROJECTS</h5>
-              <p>Ongoing</p>
-              <p>Upcoming</p>
-              <p>Completed</p>
-              <p>Land Projects</p>
-            </ul>
-            <ul>
-              <h5>SERVICES</h5>
-              <li>
-                Civil Engineering
-                <br />
-                Products & Quality
-                <br /> Leadership & Initiative
-                <br />
-                Environmental & Social Responsibilities
-                <br />
-                Best Business Practices
-              </li>
-
-              <h5> </h5>
-              <p>Career</p>
-              <p>Gallery</p>
-            </ul>
-            <ul>
-              <SocialIcons />
-            </ul>
-          </Flex>
-          <footerText></footerText>
-        </Container>
-        {/* border Part */}
-
-        <Container className="bottomStyle">
-          <Flex className="boder">
-            <TagLineTexts>
-              <h4>© 2021 Builders Limited.</h4>
-            </TagLineTexts>
-
-            <TagLineTexts>
-              <h4>© 2021 Builders Limited.</h4>
-            </TagLineTexts>
-         
-            <DesignedBy>
-              <h4 ><span className="ddColor"> Designed & Developed by</span>  Dcastalia</h4>
-            </DesignedBy>
-       
-          </Flex>
-        </Container>
-      </StyledFooter>
-    </>
+        <MDBContainer fluid>
+          <Container>
+            <div className="footer-copyright text-center top">
+              <Row>
+                <Col className="end" style={{ textAlign: "left" }}>
+                  © 2021 Mir Group Ltd. <br />
+                  Designed & Developed by Dcastalia
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </MDBContainer>
+      </MDBFooter>
+    </FooterContainer>
   );
 };
 

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+.bgCover {
+  padding-top: 25.62%;
+  position: relative;
+  overflow: hidden;
+}
+.bgCover > img {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  object-fit: cover;
+  position: absolute;
+}
+.bgCover::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 60px;
+  z-index: 2;
+  width: 50%;
+}

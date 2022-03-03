@@ -1,33 +1,43 @@
 import React from "react";
-import {
-  HeaderStyled,
-  BackgroundImage,
-  Logo,
-  TransparentBackground,
-  HumburgerStyled,
-  HeaderTitles,
-} from "./Header.styled";
-import { Container } from "../GlobalStyle";
-import HamburgerMenu from "../HumburgerMenu/HumburgerMenu";
-
+import { Container, Navbar, Row, Col } from "react-bootstrap";
+import { NavBarStyled, HumburgerSyled } from "./Header.styled";
+import Banner from "./Banner.png";
+import "./Humburger.css";
+import "./Header.css";
 const Header = () => {
   return (
-    <HeaderStyled>
-      <BackgroundImage src="./assets/Mask Group 38@2x.png" />
-      <TransparentBackground />
+    <>
+      <NavBarStyled>
+        <Navbar bg="mybg">
+          <Container>
+            <Navbar.Brand href="#">
+              <img src="./assets/logo.png" alt="" />
+            </Navbar.Brand>
+            <Navbar.Brand>
+              <HumburgerSyled>
+                <div class="hamburger">
+                  <div></div>
+                </div>
+              </HumburgerSyled>
+            </Navbar.Brand>
+          </Container>
+        </Navbar>
+      </NavBarStyled>
 
-      <Container>
-        <Logo src="./assets/Group 7598.svg" />
-        <HumburgerStyled>
-          <HamburgerMenu />
-        </HumburgerStyled>
+      <div className="bgCover">
+        <img src={Banner} alt="" />
 
-        <HeaderTitles>
-          <h3>THE SUPERIOR LIFESTYLE</h3>
-          <h1>EXCELLENCE DELIVERED</h1>
-        </HeaderTitles>
-      </Container>
-    </HeaderStyled>
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <div className="about">
+                <h2>About Us</h2>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
   );
 };
 
